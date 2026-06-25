@@ -14,7 +14,7 @@ export default function Showreel() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Cinematic direct video URL (local showreel video)
-  const videoUrl = "/videos/horizontal/horizontal_1.mp4";
+  const videoUrl = "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/horizontal/horizontal_1.mp4";
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
