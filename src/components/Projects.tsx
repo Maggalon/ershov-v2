@@ -427,7 +427,20 @@ export default function Projects() {
 
 function ProjectCard({ project, onClick }: { project: Project; onClick: () => void }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (isHovered) {
+      setShouldLoad(true);
+    } else {
+      timer = setTimeout(() => {
+        setShouldLoad(false);
+      }, 500); // Wait for transition-opacity (500ms) to complete before unmounting
+    }
+    return () => clearTimeout(timer);
+  }, [isHovered]);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -436,10 +449,9 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
         videoRef.current.play().catch(() => {});
       } else {
         videoRef.current.pause();
-        videoRef.current.currentTime = 0;
       }
     }
-  }, [isHovered]);
+  }, [isHovered, shouldLoad]);
 
   const aspectClass = project.aspectRatio === "vertical" ? "aspect-[9/16]" : "aspect-video";
 
@@ -467,17 +479,19 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
       />
 
       {/* Muted Loop Video Preview */}
-      <video
-        ref={videoRef}
-        src={project.video}
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 pointer-events-none ${
-          isHovered ? "opacity-75 scale-102" : "opacity-0"
-        }`}
-      />
+      {shouldLoad && (
+        <video
+          ref={videoRef}
+          src={project.video}
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 pointer-events-none ${
+            isHovered ? "opacity-75 scale-102" : "opacity-0"
+          }`}
+        />
+      )}
 
       {/* Gradient Scrim */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent z-10 pointer-events-none" />
