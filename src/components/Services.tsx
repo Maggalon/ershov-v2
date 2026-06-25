@@ -53,10 +53,10 @@ export default function Services() {
             УСЛУГИ
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none">
-            Направления работы
+            Услуги монтажа и VFX
           </h2>
           <p className="text-sm md:text-base text-zinc-400 max-w-[60ch] leading-relaxed">
-            Полный цикл постпродакшена — от чернового монтажа до финального рендера и сведения звука.
+            Полный цикл постпродакшена на заказ — от чернового монтажа видео до финального VFX рендера, цветокоррекции и сведения звука.
           </p>
         </div>
 

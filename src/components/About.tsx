@@ -23,7 +23,7 @@ export default function About() {
                 БИОГРАФИЯ
               </span>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none">
-                За кадром истории
+                Опыт и творческий подход
               </h2>
             </div>
 
@@ -64,8 +64,8 @@ export default function About() {
           >
             <div className="relative w-full h-full rounded-xl overflow-hidden bg-zinc-950">
               <Image
-                src="/editor_portrait.png"
-                alt="Станислав Ершов портрет"
+                src="/editor_portrait.jpg"
+                alt="Портрет режиссера монтажа и VFX-художника Станислава Ершова"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover opacity-90 hover:scale-102 transition-transform duration-700 ease-out"

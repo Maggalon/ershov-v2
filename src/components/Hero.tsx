@@ -44,7 +44,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.05] text-gradient"
           >
-            Создаю визуальную поэзию <br />и спецэффекты
+            Профессиональный монтаж <br />видео и спецэффекты (VFX)
           </motion.h1>
 
           {/* Element 3: Subtext (Max 20 words) */}
@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             className="text-sm md:text-base text-zinc-400 leading-relaxed max-w-[50ch]"
           >
-            Кинематографичный монтаж, фотореалистичный 3D-композитинг и глубокая цветокоррекция для тех, кто видит разницу.
+            Кинематографичный видеомонтаж на заказ, фотореалистичный 3D-композитинг и глубокая цветокоррекция для кино, рекламы и клипов.
           </motion.p>
 
           {/* Element 4: CTAs (1 primary + max 1 secondary) */}
@@ -94,7 +94,7 @@ export default function Hero() {
             <div className="relative w-full h-full rounded-xl overflow-hidden bg-zinc-950">
               <Image
                 src="/project_cinema.png"
-                alt="Cinematic frame preview"
+                alt="Кадр из кинофильма — пример профессионального монтажа Станислава Ершова"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

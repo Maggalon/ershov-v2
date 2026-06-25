@@ -13,8 +13,8 @@ export default function Showreel() {
   const [timecode, setTimecode] = useState("00:00:00:00");
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Cinematic direct video URL (drone landscape footage)
-  const videoUrl = "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e339f37a942502ef490c679d71c&profile_id=139&oauth2_token_id=57447761";
+  // Cinematic direct video URL (local showreel video)
+  const videoUrl = "/videos/horizontal/horizontal_1.mp4";
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -84,7 +84,7 @@ export default function Showreel() {
               СМОТРЕТЬ РАБОТЫ
             </span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none">
-              Шоурил 2026
+              Шоурил видеомонтажа 2026
             </h2>
             <p className="text-sm md:text-base text-zinc-400 max-w-[65ch] leading-relaxed">
               Короткая компиляция лучших кадров, визуальных эффектов и монтажных склеек. Нажмите на плеер для запуска полноэкранного просмотра.
@@ -102,8 +102,8 @@ export default function Showreel() {
           >
             {/* Backdrop thumbnail image */}
             <Image
-              src="/project_color_grading.png"
-              alt="Showreel preview poster"
+              src="/intros/horizontal-1-intro.png"
+              alt="Постер шоурила Станислава Ершова — примеры монтажа видео и спецэффектов"
               fill
               className="object-cover opacity-70 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
