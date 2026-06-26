@@ -132,8 +132,8 @@ const projectsList: Project[] = [
 
 const categories = [
   { id: "all", label: "Все работы" },
-  { id: "horizontal", label: "Горизонтальные (Кино/Реклама)" },
   { id: "vertical", label: "Вертикальные (Reels/Shorts)" },
+  { id: "horizontal", label: "Горизонтальные (Кино/Реклама)" },
   { id: "ai", label: "AI & VFX" },
 ];
 
@@ -253,30 +253,7 @@ export default function Projects() {
 
         {/* Dynamic Categorized Grid View */}
         <div className="space-y-16">
-          {/* 1. Horizontal Grid Section */}
-          {horizontalAndAiProjects.length > 0 && (
-            <motion.div layout className="space-y-6">
-              {activeCategory === "all" && (
-                <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500 border-b border-zinc-900 pb-3 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-                  Горизонтальные проекты & VFX / Кино и Эффекты
-                </h3>
-              )}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <AnimatePresence mode="popLayout">
-                  {horizontalAndAiProjects.map((project) => (
-                    <ProjectCard
-                      key={project.id}
-                      project={project}
-                      onClick={() => openPlayer(project)}
-                    />
-                  ))}
-                </AnimatePresence>
-              </div>
-            </motion.div>
-          )}
-
-          {/* 2. Vertical Grid Section */}
+          {/* 1. Vertical Grid Section */}
           {verticalProjects.length > 0 && (
             <motion.div layout className="space-y-6">
               {activeCategory === "all" && (
@@ -288,6 +265,29 @@ export default function Projects() {
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
                 <AnimatePresence mode="popLayout">
                   {verticalProjects.map((project) => (
+                    <ProjectCard
+                      key={project.id}
+                      project={project}
+                      onClick={() => openPlayer(project)}
+                    />
+                  ))}
+                </AnimatePresence>
+              </div>
+            </motion.div>
+          )}
+
+          {/* 2. Horizontal Grid Section */}
+          {horizontalAndAiProjects.length > 0 && (
+            <motion.div layout className="space-y-6">
+              {activeCategory === "all" && (
+                <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500 border-b border-zinc-900 pb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                  Горизонтальные проекты & VFX / Кино и Эффекты
+                </h3>
+              )}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <AnimatePresence mode="popLayout">
+                  {horizontalAndAiProjects.map((project) => (
                     <ProjectCard
                       key={project.id}
                       project={project}
