@@ -19,7 +19,7 @@ export default function Hero() {
       </div>
 
       <div className="max-w-5xl mx-auto w-full px-4 text-center z-10 py-12 md:py-20 flex flex-col items-center justify-center space-y-8">
-        
+
         {/* Element 1: Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -40,7 +40,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95] text-gradient py-1"
         >
-          Профессиональный монтаж <br className="hidden sm:inline" />видео и спецэффекты
+          Профессиональный монтаж видео <br className="hidden sm:inline" />и спецэффекты
         </motion.h1>
 
         {/* Element 3: Subtext */}
