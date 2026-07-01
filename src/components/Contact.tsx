@@ -34,17 +34,17 @@ export default function Contact() {
                 КОНТАКТЫ
               </span>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none">
-                Давайте создадим что-то легендарное
+                Давайте разберем ваш кейс
               </h2>
               <p className="text-sm md:text-base text-zinc-400 leading-relaxed max-w-[40ch]">
-                Есть идея для фильма, клипа или рекламного ролика? Напишите мне, и мы обсудим детали сотрудничества.
+                Есть идея для клипа или рекламного ролика? Напишите мне, и мы обсудим детали сотрудничества.
               </p>
             </div>
 
             {/* Direct Social Channels */}
             <address className="space-y-4 not-italic">
               <a
-                href="https://t.me/kosmostas_err"
+                href="https://t.me/kosmostas_edit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-rose-500/50 hover:bg-zinc-900/40 transition-all duration-300 group cursor-pointer"
@@ -54,12 +54,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider font-semibold">Телеграм</div>
-                  <div className="text-sm text-zinc-300 font-medium group-hover:text-white">@kosmostas_err</div>
+                  <div className="text-sm text-zinc-300 font-medium group-hover:text-white">@kosmostas_edit</div>
                 </div>
               </a>
 
               <a
-                href="mailto:ershov1230121@gmail.com"
+                href="mailto:ershhhadd@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-rose-500/50 hover:bg-zinc-900/40 transition-all duration-300 group cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-rose-400 group-hover:border-rose-500/30 transition-all">
@@ -67,7 +67,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider font-semibold">Почта</div>
-                  <div className="text-sm text-zinc-300 font-medium group-hover:text-white">ershov1230121@gmail.com</div>
+                  <div className="text-sm text-zinc-300 font-medium group-hover:text-white">ershhhadd@gmail.com</div>
                 </div>
               </a>
 

@@ -5,17 +5,17 @@ import Image from "next/image";
 
 export default function About() {
   const stats = [
-    { label: "ЛЕТ ОПЫТА", value: "7+" },
-    { label: "ПРОЕКТОВ СДАНО", value: "80+" },
-    { label: "КИНОНАГРАД", value: "3" },
-    { label: "FPS НАШЕЙ ЖИЗНИ", value: "24" },
+    { label: "ЛЕТ ОПЫТА", value: "2+" },
+    { label: "ПРОЕКТОВ СДАНО", value: "20+" },
+    { label: "ПРОГРАММ В АРСЕНАЛЕ", value: "5+" },
+    { label: "НА СВЯЗИ", value: "24/7" },
   ];
 
   return (
     <section id="about" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Text & Stats */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
@@ -29,7 +29,7 @@ export default function About() {
 
             <div className="space-y-4 text-zinc-400 text-sm md:text-base leading-relaxed max-w-[60ch]">
               <p>
-                Привет! Меня зовут Станислав Ершов, и я помогаю режиссерам и брендам собирать сырой материал в захватывающие истории. Мой путь начался более семи лет назад, и с тех пор я успел поработать над десятками проектов — от динамичных рекламных роликов до короткометражных художественных фильмов.
+                Меня зовут Станислав, и я помогаю брендам собирать сырой материал в качественный продукт. Мой путь начался более двух лет назад.
               </p>
               <p>
                 Я совмещаю классические техники монтажа с глубоким пониманием визуальных эффектов (VFX), композитинга и цветокоррекции. Это позволяет мне видеть картину целиком уже на этапе чернового монтажа и предлагать нестандартные творческие решения.

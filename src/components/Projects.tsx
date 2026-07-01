@@ -20,11 +20,11 @@ interface Project {
 const projectsList: Project[] = [
   {
     id: "horizontal_1",
-    title: "Эхо Прошлого (VFX Showreel)",
+    title: "Реклама спортивного клуба",
     category: "horizontal",
-    categoryLabel: "VFX / Кино",
+    categoryLabel: "VFX / Реклама",
     year: "2026",
-    roles: ["3D-Композитинг", "Симуляции"],
+    roles: ["Продюссирование", "Съемка"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/horizontal/horizontal_1.mp4",
     image: "/intros/horizontal-1-intro.png",
     aspectRatio: "horizontal",
@@ -35,7 +35,7 @@ const projectsList: Project[] = [
     category: "vertical",
     categoryLabel: "Shorts / Reels",
     year: "2026",
-    roles: ["Монтаж", "Цветокоррекция"],
+    roles: ["Монтаж", "Анимация"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/vertical/vertical_1.mp4",
     image: "/intros/vertical-1-intro.png",
     aspectRatio: "vertical",
@@ -48,7 +48,7 @@ const projectsList: Project[] = [
     year: "2026",
     roles: ["Runway Gen-3", "Креатив"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/ai/ai_1.mp4",
-    image: "/project_color_grading.png",
+    image: "/intros/ai-1-intro.png",
     aspectRatio: "horizontal",
   },
   {
@@ -64,13 +64,13 @@ const projectsList: Project[] = [
   },
   {
     id: "horizontal_2",
-    title: "Пленники Тумана",
+    title: "Анимация логотипа",
     category: "horizontal",
-    categoryLabel: "ХУДОЖЕСТВЕННЫЙ ФИЛЬМ",
+    categoryLabel: "ЛОГО",
     year: "2025",
     roles: ["Монтаж", "Саунд-дизайн"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/horizontal/horizontal_2.mp4",
-    image: "/project_cinema.png",
+    image: "/intros/horizontal-2-intro.png",
     aspectRatio: "horizontal",
   },
   {
@@ -79,7 +79,7 @@ const projectsList: Project[] = [
     category: "vertical",
     categoryLabel: "Shorts / Reels",
     year: "2026",
-    roles: ["Монтаж", "Цветокоррекция"],
+    roles: ["Монтаж", "Motion"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/vertical/vertical_3.mp4",
     image: "/project_music_video.png",
     aspectRatio: "vertical",
@@ -90,7 +90,7 @@ const projectsList: Project[] = [
     category: "ai",
     categoryLabel: "AI & VFX",
     year: "2026",
-    roles: ["Face Swap", "Нейросети"],
+    roles: ["Kling AI", "Нейросети"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/ai/ai_2.mp4",
     image: "/intros/ai-2-intro.png",
     aspectRatio: "horizontal",
@@ -101,7 +101,7 @@ const projectsList: Project[] = [
     category: "vertical",
     categoryLabel: "Shorts / Reels",
     year: "2026",
-    roles: ["Монтаж", "Саунд-дизайн"],
+    roles: ["Монтаж", "3D-Композитинг"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/vertical/vertical_4.mp4",
     image: "/intros/vertical-4-intro.png",
     aspectRatio: "vertical",
@@ -123,7 +123,7 @@ const projectsList: Project[] = [
     category: "vertical",
     categoryLabel: "Shorts / Reels",
     year: "2026",
-    roles: ["Монтаж", "Цветокоррекция"],
+    roles: ["Монтаж", "VFX"],
     video: "https://suld6rjxiwyznzb7.public.blob.vercel-storage.com/videos/vertical/vertical_6.mp4",
     image: "/intros/vertical-6-intro.png",
     aspectRatio: "vertical",
@@ -213,7 +213,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="flex flex-col space-y-4 max-w-2xl">
@@ -235,9 +235,8 @@ export default function Projects() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`relative px-4 py-2 text-xs font-mono rounded-full transition-colors cursor-pointer ${
-                activeCategory === cat.id ? "text-white" : "text-zinc-500 hover:text-zinc-300"
-              }`}
+              className={`relative px-4 py-2 text-xs font-mono rounded-full transition-colors cursor-pointer ${activeCategory === cat.id ? "text-white" : "text-zinc-500 hover:text-zinc-300"
+                }`}
             >
               {activeCategory === cat.id && (
                 <motion.div
@@ -315,9 +314,8 @@ export default function Projects() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className={`relative w-full max-w-5xl rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950 flex flex-col group/player ${
-                selectedProject.aspectRatio === "vertical" ? "max-h-[85vh] aspect-[9/16]" : "aspect-video"
-              }`}
+              className={`relative w-full max-w-5xl rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950 flex flex-col group/player ${selectedProject.aspectRatio === "vertical" ? "max-h-[85vh] aspect-[9/16]" : "aspect-video"
+                }`}
             >
               {/* HTML5 video element */}
               <video
@@ -446,7 +444,7 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
     if (videoRef.current) {
       if (isHovered) {
         videoRef.current.playbackRate = 1.0;
-        videoRef.current.play().catch(() => {});
+        videoRef.current.play().catch(() => { });
       } else {
         videoRef.current.pause();
       }
@@ -473,9 +471,8 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
         alt={`Проект ${project.title} — пример видеомонтажа и спецэффектов от Станислава Ершова`}
         fill
         sizes="(max-width: 768px) 50vw, 25vw"
-        className={`object-cover z-0 transition-opacity duration-500 ${
-          isHovered ? "opacity-0" : "opacity-45 group-hover:scale-102"
-        }`}
+        className={`object-cover z-0 transition-opacity duration-500 ${isHovered ? "opacity-0" : "opacity-45 group-hover:scale-102"
+          }`}
       />
 
       {/* Muted Loop Video Preview */}
@@ -487,9 +484,8 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
           loop
           playsInline
           preload="auto"
-          className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 pointer-events-none ${
-            isHovered ? "opacity-75 scale-102" : "opacity-0"
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-75 scale-102" : "opacity-0"
+            }`}
         />
       )}
 

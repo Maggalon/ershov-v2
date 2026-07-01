@@ -22,7 +22,7 @@ export default function Home() {
         <Hero />
 
         {/* Showreel Player Section */}
-        <Showreel />
+        {/* <Showreel /> */}
 
         {/* Selected Projects Bento Grid */}
         <Projects />

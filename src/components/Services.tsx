@@ -15,7 +15,7 @@ export default function Services() {
   const services: Service[] = [
     {
       title: "Режиссура монтажа",
-      description: "Смысловой монтаж любой сложности. Нарезка сцен, удержание темпа, создание ритмического рисунка для фильмов, рекламы и музыкальных клипов.",
+      description: "Нарезка сцен, удержание темпа, создание ритмического рисунка для фильмов, рекламы и музыкальных клипов.",
       tools: ["Premiere Pro", "DaVinci Resolve"],
       features: ["Монтаж сцен", "Черновые сборки", "Трейлеры / Тизеры"],
       icon: <Scissors size={32} className="text-rose-500" />,
@@ -46,7 +46,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20 md:py-28 relative bg-black/20">
       <div className="max-w-7xl mx-auto px-4 z-10 relative">
-        
+
         {/* Section Header */}
         <div className="flex flex-col space-y-4 mb-16 max-w-2xl">
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-rose-500 font-semibold">
@@ -56,7 +56,7 @@ export default function Services() {
             Услуги монтажа и VFX
           </h2>
           <p className="text-sm md:text-base text-zinc-400 max-w-[60ch] leading-relaxed">
-            Полный цикл постпродакшена на заказ — от чернового монтажа видео до финального VFX рендера, цветокоррекции и сведения звука.
+            Полный цикл постпродакшена на заказ — от чернового монтажа видео до цветокоррекции, сведения звука и финального рендера.
           </p>
         </div>
 

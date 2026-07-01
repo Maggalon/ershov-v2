@@ -20,38 +20,38 @@ export default function Header() {
     >
       <div className="glass-panel rounded-full px-6 h-14 md:h-16 flex items-center justify-between">
         {/* Logo */}
-        <div 
+        <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-2 cursor-pointer group"
         >
           <FilmReel size={24} className="text-rose-500 transition-transform duration-500 group-hover:rotate-180" />
           <span className="font-mono text-sm tracking-widest font-semibold uppercase">
-            Ершов <span className="text-rose-500">.</span> VFX
+            KOSMOS <span className="text-rose-500">.</span> MEDIA
           </span>
         </div>
 
         {/* Links */}
         <nav className="hidden md:flex items-center gap-8">
-          <button 
-            onClick={() => scrollToSection("showreel")} 
+          <button
+            onClick={() => scrollToSection("showreel")}
             className="text-xs tracking-wider uppercase text-zinc-400 hover:text-white transition-colors duration-200"
           >
             Шоурил
           </button>
-          <button 
-            onClick={() => scrollToSection("projects")} 
+          <button
+            onClick={() => scrollToSection("projects")}
             className="text-xs tracking-wider uppercase text-zinc-400 hover:text-white transition-colors duration-200"
           >
             Проекты
           </button>
-          <button 
-            onClick={() => scrollToSection("services")} 
+          <button
+            onClick={() => scrollToSection("services")}
             className="text-xs tracking-wider uppercase text-zinc-400 hover:text-white transition-colors duration-200"
           >
             Услуги
           </button>
-          <button 
-            onClick={() => scrollToSection("about")} 
+          <button
+            onClick={() => scrollToSection("about")}
             className="text-xs tracking-wider uppercase text-zinc-400 hover:text-white transition-colors duration-200"
           >
             Обо мне
